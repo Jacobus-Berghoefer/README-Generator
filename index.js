@@ -55,21 +55,21 @@ const writeToFile = (fileName, answers) => {
 const init = () => {
     inquirer.prompt(questions).then((answers) => {
         const readmeContent = `
-#${answers.project}
+# ${answers.project}
 
-##Motivation
+## Motivation
 ${answers.motive}
 
-##Why this project was built
+## Why this project was built
 ${answers.why}
 
-##Problem this project solves
+## Problem this project solves
 ${answers.prob}
 
-##What was learned
+## What was learned
 ${answers.learn}
 
-##What makes this project unique
+## What makes this project unique
 ${answers.unique}
         `;
 
