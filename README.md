@@ -1,5 +1,5 @@
 # README Generator
-  ![License](https://img.shields.io/badge/license-MIT-brightgreen)
+  
 
 ## Description
 
@@ -25,6 +25,7 @@ usage explained
 
 ## License
 
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 This project is licensed under the [MIT](https://img.shields.io/badge/License-MIT-yellow.svg) license.
 
 
