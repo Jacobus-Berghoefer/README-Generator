@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import fs from 'fs';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 
 // TODO: Create an array of questions for user input
@@ -8,38 +9,49 @@ import fs from 'fs';
 const questions = [
     {
         type: 'input',
-        message: 'Who is the creator of this README?',
+        message: 'What is the name of this project?',
         name: 'name',
     },
     {
         type: 'input',
-        message: 'What is the name of this project?',
-        name: 'project',
+        message: 'Please provide a description for this project:',
+        name: 'description',
     },
     {
         type: 'input',
-        message: 'What was your motivation?',
-        name: 'motive',
+        message: 'Please provide installation instructions:',
+        name: 'install',
     },
     {
         type: 'input',
-        message: 'Why did you build this project?',
-        name: 'why',
+        message: 'How is this application used?',
+        name: 'usage',
+    },
+    {
+        type: 'list',
+        message: 'What license does this project use?',
+        name: 'license',
+        choices: ['Apache', 'BSD3', 'BSD2', 'Eclipse', 'IBM', 'MIT', 'Mozilla', 'Attribution', 'ODbL', 'PDDL', 'Perl', 'Artistic', 'Zlib'],
     },
     {
         type: 'input',
-        message: 'What problem does it solve?',
-        name: 'prob',
+        message: 'Who can contribute to this project?',
+        name: 'contributors',
     },
     {
         type: 'input',
-        message: 'What did you learn?',
-        name: 'learn',
+        message: 'What are the test instructions?',
+        name: 'tests',
     },
     {
         type: 'input',
-        message: 'What makes your project stand out?',
-        name: 'unique',
+        message: 'Enter your GitHub username',
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email',
     },
 ]; 
 
@@ -54,35 +66,9 @@ const writeToFile = (fileName, answers) => {
 // TODO: Create a function to initialize app
 const init = () => {
     inquirer.prompt(questions).then((answers) => {
-        const readmeContent = `
-# ${answers.project}
-
-## Motivation
-${answers.motive}
-
-## Why this project was built
-${answers.why}
-
-## Problem this project solves
-${answers.prob}
-
-## What was learned
-${answers.learn}
-
-## What makes this project unique
-${answers.unique}
-        `;
-
+        const readmeContent = generateMarkdown(answers);
         writeToFile('README.md', readmeContent);
     });
 };
 
 init();
-
-
-
-
-    
-    
-    
-    

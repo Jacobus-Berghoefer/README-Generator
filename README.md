@@ -1,18 +1,45 @@
-
 # README Generator
+  ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-## Motivation
-To utilize a readme template that included key points for a readme, each time a project is started.
+## Description
 
-## Why this project was built
-To have consistent and effective README's for all my projects.
+Description
 
-## Problem this project solves
-Sloppy and inconsistent README's
+## Table of Contents
 
-## What was learned
-I Learned how to utilize inquirer, so I can setup a list of questions in an array as objects. Then pull those objects out, and reference their parameters to have user created content for the README.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-## What makes this project unique
-This project references what makes a professional README on the full-stack blog: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-        
+## Installation
+
+installation instruct
+
+## Usage
+
+usage explained
+
+
+## License
+
+This project is licensed under the [MIT](https://img.shields.io/badge/License-MIT-yellow.svg) license.
+
+
+## Contributors
+
+README users
+
+## Tests
+
+confirm you have a github repo, install inquirer package, npm i inquirer
+
+## Questions
+
+If you have any questions, feel free to reach out:
+
+- GitHub: [Jacobus-Berghoefer](https://github.com/Jacobus-Berghoefer)
+- Email: [jacobus.berghoefer@gmail.com](mailto:jacobus.berghoefer@gmail.com)
+
